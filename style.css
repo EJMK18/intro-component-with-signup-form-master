@@ -1,0 +1,233 @@
+/* ---------------- */
+/* GENERAL SETTINGS */
+/* ---------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  /* colours */
+  --primary-red: hsl(0, 100%, 74%);
+  --primary-green: hsl(154, 59%, 51%);
+  --accent-blue: hsl(248, 32%, 49%);
+  --neutral-dark-blue: hsl(249, 10%, 26%);
+  --neutral-dark-blue-alpha: hsla(249, 10%, 26%, 0.2);
+  --neutral-grayish-blue: hsl(246, 25%, 77%);
+  --neutral-grayish-blue-alpha: hsla(246, 25%, 77%, 0.4);
+
+  /* font-size */
+  --fs-heading-1: 4.2rem;
+  --fs-heading-1-mobi: 3.8rem;
+  --fs-normal: 1.6rem;
+  --fs-medium: 1.3rem;
+  --fs-small: 1.1rem;
+
+  /* paddings & margins */
+  --mb-bottom: 2.8rem;
+  --container-padding: 3rem;
+  --item-padding: 1.4rem;
+
+  /* grid & flex gaps */
+  --container-gap-normal: 3rem;
+  --container-gap-medium: 2rem;
+  --grid-container-gap: 4rem;
+
+  /* border-radius */
+  --border-radius-normal: 0.8rem;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--primary-red) url(/images/bg-intro-desktop.png);
+  background-size: cover;
+
+  padding: 4rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: var(--grid-container-gap);
+
+  width: 85rem;
+}
+
+.main-left .main-right {
+  padding: var(--container-padding);
+}
+
+input {
+  padding: var(--item-padding);
+  border-radius: var(--border-radius-normal);
+  border: 0.1rem solid var(--neutral-grayish-blue-alpha);
+  color: var(--neutral-dark-blue);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 600;
+  width: 100%;
+}
+
+input:focus {
+  border: 0.1rem solid var(--neutral-grayish-blue);
+  outline: 0.1rem solid var(--neutral-grayish-blue);
+}
+
+input:invalid {
+  content: url(file:///E:/Evan/frontend_mentor/newbie/Intro%20Sign-up%20comp/intro-component-with-signup-form-master/intro-component-with-signup-form-master/images/icon-error.svg);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ---------------- */
+/* LEFT MAIN STYLING */
+/* ---------------- */
+h1 {
+  font-size: var(--fs-heading-1);
+  line-height: 4rem;
+  margin-bottom: var(--mb-bottom);
+}
+
+.main-left > p {
+  font-size: var(--fs-medium);
+}
+
+/* ---------------- */
+/* RIGHT MAIN STYLING */
+/* ---------------- */
+.main-right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--container-gap-medium);
+  height: 100%;
+}
+
+.main-right > article {
+  text-align: center;
+  padding: var(--item-padding);
+  background: var(--accent-blue);
+
+  border-radius: var(--border-radius-normal);
+  box-shadow: 0 0.6rem var(--neutral-dark-blue-alpha);
+}
+
+/* input:invalid {
+  border: solid 0.1rem var(--primary-red);
+} */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--container-gap-normal);
+  background: #fff;
+  padding: var(--container-padding);
+
+  border-radius: var(--border-radius-normal);
+  box-shadow: 0 0.6rem var(--neutral-dark-blue-alpha);
+}
+
+button {
+  padding: var(--item-padding);
+  border: none;
+  border-radius: var(--border-radius-normal);
+  box-shadow: inset 0 -0.4rem var(--neutral-dark-blue-alpha);
+  background: var(--primary-green);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+form > p {
+  color: var(--neutral-grayish-blue);
+  text-align: center;
+}
+
+form > p > a {
+  color: var(--primary-red);
+  font-weight: 700;
+}
+
+/* ---------------- */
+/* FOOTER STYLING */
+/* ---------------- */
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ---------------- */
+/* MEDIA QUERIES STYLING */
+/* ---------------- */
+
+@media (width <= 560px) {
+  body {
+    scale: 0.9;
+    padding: 2rem 0;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: var(--fs-heading-1-mobi);
+  }
+
+  .main-left > p {
+    font-size: var(--fs-normal);
+  }
+
+  .attribution {
+    display: none;
+  }
+}
+
+/* ---------------- */
+/* VALIDATION CLASSES */
+/* ---------------- */
+.error {
+  border: 0.2rem solid var(--primary-red);
+  background: no-repeat url(images/icon-error.svg);
+  background-position: 90%;
+  border-radius: inherit;
+}
+
+.input-container.error > input::placeholder {
+  color: var(--primary-red);
+}
