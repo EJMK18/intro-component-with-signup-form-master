@@ -192,8 +192,8 @@ footer {
 
 @media (width <= 560px) {
   body {
-    scale: 0.9;
-    padding: 2rem 0;
+    scale: 0.8;
+    padding: 1rem 0;
   }
 
   main {
@@ -228,6 +228,20 @@ footer {
   border-radius: inherit;
 }
 
-.input-container.error > input::placeholder {
+input.error::placeholder {
+  color: transparent;
+}
+
+.email-placeholder::placeholder {
+  color: var(--primary-red) !important;
+}
+
+.error-message {
+  display: none;
+  text-align: right;
   color: var(--primary-red);
+  font-weight: 600;
+  font-style: italic;
+  width: 100%;
+  margin: -2rem 0;
 }
