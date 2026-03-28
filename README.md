@@ -31,7 +31,7 @@ Your users should be able to:
 
 ### Screenshot
 
-![Solution Screenshot](intro-component-solution-img.png)
+![Solution Screenshot](intro-component-solution-img.PNG)
 
 ### Links
 
