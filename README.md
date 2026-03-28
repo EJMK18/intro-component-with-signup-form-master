@@ -35,7 +35,7 @@ Your users should be able to:
 
 ### Links
 
-- Solution URL: [Github repository](https://github.com/EJMK18/FEM---intro-component-with-signup-form-master)
+- Solution URL: [Github repository](https://github.com/EJMK18/intro-component-with-signup-form-master)
 - Live Site URL: [Vercel - Live site deployed](https://intro-component-with-signup-form-ma-five.vercel.app/)
 
 ## My process
